@@ -1,0 +1,172 @@
+Q1. Explain the role of operators in JavaScript. Why are they essential in programming?
+
+ANS : Operators in JavaScript are essential symbols that perform operations on data. They enable arithmetic calculations, comparisons, logical evaluations, variable assignments, and more. Operators play a fundamental role in expressing algorithms, making decisions, and manipulating data efficiently. They are critical for writing concise and functional JavaScript code.
+
+
+Q2. Describe the categorization of operators in JavaScript based on their functionality. Provide examples for
+each category.
+
+ANS : JavaScript operators can be categorized by functionality:
+
+1.  Arithmetic Operators: 
+   - Examples: `+`, `-`, `*`, `/`, `%`.
+
+2.  Comparison Operators: 
+   - Examples: `==`, `===`, `!=`, `!==`, `<`, `>`, `<=`, `>=`.
+
+3.  Logical Operators: 
+   - Examples: `&&`, `||`, `!`.
+
+4.  Assignment Operators: 
+   - Examples: `=`, `+=`, `-=`, `*=`, `/=`.
+
+5.  Increment and Decrement Operators: 
+   - Examples: `++`, `--`.
+
+6.  Bitwise Operators: 
+   - Examples: `&`, `|`, `^`, `~`, `<<`, `>>`, `>>>`.
+
+7.  String Operators: 
+   - Example: `+`.
+
+8.  Conditional Operator: 
+   - Example: `condition ? expression1 : expression2`.
+
+
+
+
+Q3. Differentiate between unary, binary, and ternary operators in JavaScript. Give examples of each.
+ANS :
+
+1.  Unary Operators: 
+   - Operate on a single operand.
+   - Example: `++x` (pre-increment).
+
+2.  Binary Operators: 
+   - Operate on two operands.
+   - Example: `x + y` (addition).
+
+3.  Ternary Operator: 
+   - Conditional operator, operates on three operands.
+   - Example: `condition ? expr1 : expr2`.
+
+
+
+Q4. Discuss the precedence and associativity of operators in JavaScript. Why is understanding these concepts
+important?
+
+ANS : 
+ Precedence and Associativity in JavaScript: 
+
+1.  Precedence: 
+   - Determines order of operator evaluation.
+   - Higher precedence operators are evaluated first.
+
+2.  Associativity: 
+   - Determines order when operators have same precedence.
+   - Left-to-right or right-to-left associativity.
+
+
+
+Q5. Write a JavaScript program that calculates the simple interest using the formula Simple interest =
+(principal * rate * time) / 100.
+
+ANS : 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>INdex</title>
+
+</head>
+<body>
+
+  <h2>Simple Interest Calculator</h2>
+
+  <input type="number" id="principal" placeholder="Principal amount" required>
+  <input type="number" id="rate" placeholder="Interest rate" required>
+  <input type="number" id="time" placeholder="Time in years" required>
+
+  <button onclick="calculateInterest()">Calculate Interest</button>
+
+  <p id="result"></p>
+
+  <script>
+    function calculateInterest() {
+      const [principal, rate, time] = ['principal', 'rate', 'time'].map(id => parseFloat(document.getElementById(id).value));
+      const simpleInterest = (principal * rate * time) / 100;
+      document.getElementById("result").textContent = `Simple Interest: $${simpleInterest.toFixed(2)}`;
+    }
+  </script>
+
+</body>
+</html>
+
+
+
+Q6. Write a Javascript program to calculate the Body Mass Index (BMI) using the formula BMI = weight (kg)/
+height * height.
+
+ANS : 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BMI Calculator</title>
+ 
+</head>
+<body>
+
+  <h2>BMI Calculator</h2>
+
+  <input type="number" id="weight" placeholder="Weight (kg)" required>
+  <input type="number" id="height" placeholder="Height (m)" required>
+  <button onclick="calculateBMI()">Calculate BMI</button>
+
+  <p id="result"></p>
+
+  <script>
+    function calculateBMI() {
+      const [weight, height] = ['weight', 'height'].map(id => parseFloat(document.getElementById(id).value));
+      const resultElement = document.getElementById("result");
+
+      if (isNaN(weight) || isNaN(height) || height <= 0 || weight <= 0) {
+        resultElement.textContent = "Please enter valid weight and height.";
+        return;
+      }
+
+      const bmi = weight / (height * height);
+      resultElement.textContent = `Your BMI: ${bmi.toFixed(2)}`;
+    }
+  </script>
+
+</body>
+</html>
+
+
+Q7. Write a program in JavaScript to calculate the area of a circle given its radius value of 10. Use appropriate
+arithmetic operators.
+
+ANS : 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Circle Area Calculator</title>
+  <script>
+    const radius = 10;
+    const area = Math.PI * radius   2;
+    console.log(`The area of the circle with radius ${radius} is: ${area.toFixed(2)}`);
+  </script>
+</head>
+<body>
+  
+</body>
+</html>
+
